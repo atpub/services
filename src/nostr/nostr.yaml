@@ -1,0 +1,11 @@
+name: Nostr
+profileUrl: 'https://njump.me/{identifier}'
+verificationMethods:
+  note:
+    type: http
+    input:
+      nevent:
+        type: string
+    url: 'https://njump.me/{input.nevent}'
+    format: html
+    selector: '.leading-6'

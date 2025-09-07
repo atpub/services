@@ -1,0 +1,7 @@
+name: Last.fm
+profileUrl: 'https://www.last.fm/user/{identifier}'
+verificationMethods:
+  profile:
+    type: http
+    url: 'https://www.last.fm/user/{claim.identifier}'
+    selector: 'section.about-me-sidebar'

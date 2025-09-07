@@ -1,0 +1,10 @@
+name: Telegram
+profileUrl: 'https://t.me/{identifier}'
+renderFormat: '@{identifier}'
+verificationMethods:
+  profile:
+    type: http
+    url: 'https://t.me/{claim.identifier}'
+    format: html
+    selector: 'meta[property="og:description"]'
+    attr: content

@@ -1,0 +1,7 @@
+name: DNS
+verificationMethods:
+  txt:
+    type: dns
+  well-known:
+    type: http
+    url: 'https://{claim.identifier}/.well-known/atproto-did'

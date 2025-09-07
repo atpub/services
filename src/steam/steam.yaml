@@ -1,0 +1,8 @@
+name: Steam
+profileUrl: 'https://steamcommunity.com/id/{claim.identifier}/'
+verificationMethods:
+  profile:
+    type: http
+    url: 'https://steamcommunity.com/id/{claim.identifier}/'
+    selector: 'meta[property="og:description"]'
+    attr: content

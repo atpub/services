@@ -1,0 +1,8 @@
+name: Backloggd
+profileUrl: 'https://backloggd.com/u/{identifier}/'
+verificationMethods:
+  profile:
+    type: http
+    url: 'https://backloggd.com/u/{claim.identifier}/'
+    format: html
+    selector: 'a.secondary-link'

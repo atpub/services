@@ -1,0 +1,9 @@
+name: Farcaster
+profileUrl: 'https://farcaster.xyz/{identifier}'
+renderFormat: '@{identifier}'
+verificationMethods:
+  profile:
+    type: http
+    url: 'https://client.farcaster.xyz/v2/user-by-username?username={claim.identifier}'
+    format: json
+    path: '$.result.user.profile.bio.text'

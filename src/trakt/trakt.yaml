@@ -1,0 +1,9 @@
+name: Trakt
+profileUrl: 'https://trakt.tv/users/{identifier}'
+verificationMethods:
+  profile:
+    type: http
+    url: 'https://trakt.tv/users/{claim.identifier}'
+    format: html
+    selector: div.about-me-text
+
