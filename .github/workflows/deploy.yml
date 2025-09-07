@@ -31,7 +31,7 @@ jobs:
       #- name: Test
       #  run: make test
       - name: Install deps
-        run: pnpm ci
+        run: pnpm install
       - name: Build bundle
         run: pnpm run build
       - name: Upload GitHub Pages artifact
