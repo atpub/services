@@ -48,6 +48,10 @@ async function build () {
   const indexFn = path.join(OUT_DIR, 'index.json')
   await fs.writeFile(indexFn, JSON.stringify(bundle, null, 2))
   console.log(`Writed: ${indexFn}`)
+
+  const schemaFn = path.join(OUT_DIR, 'schema.json')
+  await fs.writeFile(schemaFn, JSON.stringify(schema, null, 2))
+  console.log(`Writed: ${schemaFn}`)
 }
 
 build()
