@@ -5,16 +5,61 @@ properties:
     type: string
   profileUrl:
     type: string
+    format: url
   renderFormat:
     type: string
   icon:
     type: string
   verificationMethods:
     type: object
-    properties:
-      type:
-        type: string
-        enum:
-          - http
-          - dns
-          - atproto
+    patternProperties:
+      "^.*$":
+        type: object
+        additionalProperties: false
+        required:
+          - type
+        properties:
+          type:
+            type: string
+            enum:
+              - http
+              - dns
+              - atproto
+          input:
+            type: object
+          url:
+            type: string
+          format:
+            type: string
+            enum:
+              - html
+              - json
+              - text
+          selector:
+            type: string
+          path:
+            type: string
+          attr:
+            type: string
+        allOf:
+          - if:
+              properties:
+                type: { const: http }
+            then:
+              required:
+                - url
+                - format
+          - if:
+              properties:
+                type: { const: http }
+                format: { const: html }
+            then:
+              required:
+                - selector                  
+          - if:
+              properties:
+                type: { const: http }
+                format: { const: json }
+            then:
+              required:
+                - path  

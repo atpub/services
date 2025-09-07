@@ -4,4 +4,5 @@ verificationMethods:
     type: dns
   well-known:
     type: http
+    format: text
     url: 'https://{claim.identifier}/.well-known/atproto-did'

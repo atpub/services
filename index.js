@@ -2,6 +2,7 @@ import fs from 'fs/promises'
 import path from 'path'
 import * as yaml from 'js-yaml'
 import Ajv from "ajv"
+import addFormats from "ajv-formats"
 
 const SRC_DIR = './src'
 const OUT_DIR = './dist'
@@ -9,6 +10,7 @@ const OUT_DIR = './dist'
 async function build () {
 
   const ajv = new Ajv()
+  addFormats(ajv)
   const schema = yaml.load(await fs.readFile('./schema/service.yaml'))
   const validate = ajv.compile(schema)
 

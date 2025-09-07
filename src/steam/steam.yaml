@@ -3,6 +3,7 @@ profileUrl: 'https://steamcommunity.com/id/{claim.identifier}/'
 verificationMethods:
   profile:
     type: http
+    format: html
     url: 'https://steamcommunity.com/id/{claim.identifier}/'
     selector: 'meta[property="og:description"]'
     attr: content
