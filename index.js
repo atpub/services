@@ -14,7 +14,7 @@ async function build () {
   const schema = yaml.load(await fs.readFile('./schema/service.yaml'))
   const validate = ajv.compile(schema)
 
-  const out = {}
+  const services = {}
   for (const id of await fs.readdir(SRC_DIR)) {
     const cdir = path.join(SRC_DIR, id)
     const fn = path.join(cdir, `${id}.yaml`)
@@ -32,17 +32,21 @@ async function build () {
       process.exit(1)
     }
 
-
-    out[id] = data
+    services[id] = data
   }
 
   try {
     await fs.rm(OUT_DIR, { recursive: true })
   } catch {}
 
+  const bundle = {
+    services,
+    time: new Date().toISOString()
+  }
+
   await fs.mkdir(OUT_DIR)
   const indexFn = path.join(OUT_DIR, 'index.json')
-  await fs.writeFile(indexFn, JSON.stringify(out, null, 2))
+  await fs.writeFile(indexFn, JSON.stringify(bundle, null, 2))
   console.log(`Writed: ${indexFn}`)
 }
 
