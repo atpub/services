@@ -30,6 +30,8 @@ jobs:
       #  run: make cache
       #- name: Test
       #  run: make test
+      - name: Install deps
+        run: pnpm ci
       - name: Build bundle
         run: pnpm run build
       - name: Upload GitHub Pages artifact
