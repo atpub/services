@@ -1,0 +1,8 @@
+name: Reddit
+profileUrl: https://www.reddit.com/user/{identifier}/
+verificationMethods:
+  profile:
+    url: https://www.reddit.com/user/{claim.identifier}/about.json
+    path: "$.data.subreddit.public_description"
+    type: http
+    format: json

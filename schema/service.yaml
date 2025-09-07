@@ -41,6 +41,8 @@ properties:
             type: string
           attr:
             type: string
+          needProxy:
+            type: boolean
         allOf:
           - if:
               properties:
