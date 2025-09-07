@@ -7,3 +7,4 @@ verificationMethods:
     url: 'https://client.farcaster.xyz/v2/user-by-username?username={claim.identifier}'
     format: json
     path: '$.result.user.profile.bio.text'
+    needProxy: true
