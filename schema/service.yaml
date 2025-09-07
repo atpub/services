@@ -1,0 +1,20 @@
+type: object
+additionalProperties: false
+properties:
+  name:
+    type: string
+  profileUrl:
+    type: string
+  renderFormat:
+    type: string
+  icon:
+    type: string
+  verificationMethods:
+    type: object
+    properties:
+      type:
+        type: string
+        enum:
+          - http
+          - dns
+          - atproto
