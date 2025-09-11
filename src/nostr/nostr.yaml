@@ -1,5 +1,5 @@
 name: Nostr
-profileUrl: 'https://njump.me/{identifier}'
+profileUrlTemplate: 'https://njump.me/{identifier}'
 verificationMethods:
   note:
     type: http

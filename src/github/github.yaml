@@ -1,5 +1,5 @@
 name: GitHub
-profileUrl: 'https://github.com/{identifier}'
+profileUrlTemplate: 'https://github.com/{identifier}'
 verificationMethods:
   gist:
     type: http

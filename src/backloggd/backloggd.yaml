@@ -1,5 +1,5 @@
 name: Backloggd
-profileUrl: 'https://backloggd.com/u/{identifier}/'
+profileUrlTemplate: 'https://backloggd.com/u/{identifier}/'
 verificationMethods:
   profile:
     type: http

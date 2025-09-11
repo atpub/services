@@ -1,5 +1,5 @@
 name: Last.fm
-profileUrl: 'https://www.last.fm/user/{identifier}'
+profileUrlTemplate: 'https://www.last.fm/user/{identifier}'
 verificationMethods:
   profile:
     type: http

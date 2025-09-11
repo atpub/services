@@ -1,2 +1,2 @@
 name: age
-profileUrl: 'https://age-online.com/?r={identifier}'
+profileUrlTemplate: 'https://age-online.com/?r={identifier}'

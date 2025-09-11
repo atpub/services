@@ -1,5 +1,5 @@
 name: Trakt
-profileUrl: 'https://trakt.tv/users/{identifier}'
+profileUrlTemplate: 'https://trakt.tv/users/{identifier}'
 verificationMethods:
   profile:
     type: http

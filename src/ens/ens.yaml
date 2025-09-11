@@ -1,2 +1,2 @@
 name: ENS
-profileUrl: 'https://app.ens.domains/{identifier}'
+profileUrlTemplate: 'https://app.ens.domains/{identifier}'

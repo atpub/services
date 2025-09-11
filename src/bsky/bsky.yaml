@@ -1,5 +1,5 @@
 name: Bluesky
-profileUrl: 'https://bsky.app/profile/{identifier}'
+profileUrlTemplate: 'https://bsky.app/profile/{identifier}'
 renderFormat: '@{identifier}'
 verificationMethods:
   profile:

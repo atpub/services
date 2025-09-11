@@ -1,11 +1,17 @@
 type: object
+title: ATpub Service
 additionalProperties: false
 properties:
+  $type:
+    type: string
+    const: me.atpub.registry.service
   name:
     type: string
-  profileUrl:
+  homepage:
     type: string
-    format: url
+    format: uri
+  profileUrlTemplate:
+    type: string
   renderFormat:
     type: string
   icon:

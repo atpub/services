@@ -1,5 +1,5 @@
 name: Farcaster
-profileUrl: 'https://farcaster.xyz/{identifier}'
+profileUrlTemplate: 'https://farcaster.xyz/{identifier}'
 renderFormat: '@{identifier}'
 verificationMethods:
   profile:
