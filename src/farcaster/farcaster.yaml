@@ -1,6 +1,8 @@
 name: Farcaster
+homepage: https://farcaster.xyz
 profileUrlTemplate: 'https://farcaster.xyz/{identifier}'
-renderFormat: '@{identifier}'
+identifier:
+  renderFormat: '@{identifier}'
 verificationMethods:
   profile:
     type: http

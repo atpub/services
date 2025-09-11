@@ -1,4 +1,6 @@
 name: DNS
+identifier:
+  punycode: true
 verificationMethods:
   txt:
     type: dns

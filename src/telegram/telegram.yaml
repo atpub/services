@@ -1,6 +1,7 @@
 name: Telegram
 profileUrlTemplate: 'https://t.me/{identifier}'
-renderFormat: '@{identifier}'
+identifier:
+  renderFormat: '@{identifier}'
 verificationMethods:
   profile:
     type: http

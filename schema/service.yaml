@@ -12,8 +12,16 @@ properties:
     format: uri
   profileUrlTemplate:
     type: string
-  renderFormat:
-    type: string
+  identifier:
+    type: object
+    additionalProperties: false
+    properties:
+      renderFormat:
+        type: string
+      pattern:
+        type: string
+      punycode:
+        type: boolean
   icon:
     type: string
   verificationMethods:

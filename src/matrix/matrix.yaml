@@ -1,3 +1,4 @@
 name: Matrix
 profileUrlTemplate: 'https://matrix.to/#/@{identifier}'
-renderFormat: '@{identifier}'
+identifier:
+  renderFormat: '@{identifier}'
