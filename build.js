@@ -3,6 +3,7 @@ import path from 'path'
 import * as yaml from 'js-yaml'
 import Ajv from "ajv"
 import addFormats from "ajv-formats"
+import spec from "@atpub/spec"
 
 const SRC_DIR = './src'
 const OUT_DIR = './dist'
@@ -11,8 +12,7 @@ async function build () {
 
   const ajv = new Ajv()
   addFormats(ajv)
-  const schema = yaml.load(await fs.readFile('./schema/service.yaml'))
-  const validate = ajv.compile(schema)
+  const validate = ajv.compile(spec.schema.service)
 
   const services = {}
   for (const id of await fs.readdir(SRC_DIR)) {
@@ -48,10 +48,6 @@ async function build () {
   const indexFn = path.join(OUT_DIR, 'index.json')
   await fs.writeFile(indexFn, JSON.stringify(bundle, null, 2))
   console.log(`Writed: ${indexFn}`)
-
-  const schemaFn = path.join(OUT_DIR, 'schema.json')
-  await fs.writeFile(schemaFn, JSON.stringify(schema, null, 2))
-  console.log(`Writed: ${schemaFn}`)
 }
 
 build()

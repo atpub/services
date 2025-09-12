@@ -7,7 +7,10 @@ settings:
 importers:
 
   .:
-    dependencies:
+    devDependencies:
+      '@atpub/spec':
+        specifier: ^0.9.2
+        version: 0.9.2
       ajv:
         specifier: ^8.17.1
         version: 8.17.1
@@ -19,6 +22,9 @@ importers:
         version: 4.1.0
 
 packages:
+
+  '@atpub/spec@0.9.2':
+    resolution: {integrity: sha512-XfwQ/GdsL77U5pBnvzafW9u1DwzgjpnFDSZaTU0R0XJpcPbZzPr6F3vimzaxI7SpcaN8juYYTzuE8oOS9pindQ==}
 
   ajv-formats@3.0.1:
     resolution: {integrity: sha512-8iUql50EUR+uUcdRQ3HDqa6EVyo3docL8g5WJ3FNcWmu62IbkGUue/pEyLBW8VGKKucTPgqeks4fIU1DA4yowQ==}
@@ -52,6 +58,8 @@ packages:
     engines: {node: '>=0.10.0'}
 
 snapshots:
+
+  '@atpub/spec@0.9.2': {}
 
   ajv-formats@3.0.1(ajv@8.17.1):
     optionalDependencies:
