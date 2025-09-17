@@ -27,3 +27,7 @@ jobs:
         run: pnpm run build
       - name: Publish services
         run: pnpm run publish
+        env:
+          ATPUB_SERVICE_PDS: ${{ vars.ATPUB_SERVICE_PDS }}
+          ATPUB_SERVICE_IDENTIFIER: ${{ vars.ATPUB_SERVICE_IDENTIFIER }}
+          ATPUB_SERVICE_PASSWORD: ${{ secrets.ATPUB_SERVICE_PASSWORD }}
