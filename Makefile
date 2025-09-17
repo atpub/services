@@ -1,4 +1,7 @@
-all: build
+all: build publish
 
 build:
-	pnpm build
+	@pnpm build
+
+publish:
+	@pnpm run publish

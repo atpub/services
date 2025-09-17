@@ -6,9 +6,12 @@ verificationMethods:
     input:
       gistIt:
         type: string  
-    url: 'https://api.github.com/gists/{input.gistId}'
-    format: json
-    path: '$.files.*.content'
+    #url: 'https://api.github.com/gists/{input.gistId}'
+    #format: json
+    #path: '$.files.*.content'
+    url: https://gist.github.com/{claim.identifier}/{input.gistId}
+    format: html
+    selector: table.js-file-line-container
     needProxy: true
   profile:
     type: http

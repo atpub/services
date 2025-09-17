@@ -6,7 +6,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "node build.js"
+    "build": "node utils/build.js",
+    "publish": "node utils/publish.js"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +17,10 @@
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
     "js-yaml": "^4.1.0"
+  },
+  "dependencies": {
+    "@atproto/api": "^0.16.9",
+    "dotenv": "^17.2.2",
+    "jsondiffpatch": "^0.7.3"
   }
 }

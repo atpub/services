@@ -1,0 +1,34 @@
+name: Publish Services
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+      
+permissions:
+  actions: write
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: szenius/set-timezone@v2.0
+        with:
+          timezoneLinux: "Europe/Prague"
+      - name: Install deps
+        run: pnpm install
+      - name: Build services
+        run: pnpm run build
+      - name: Publish services
+        run: pnpm run publish

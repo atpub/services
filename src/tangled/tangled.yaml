@@ -1,0 +1,6 @@
+name: Tangled
+homepage: https://tangled.sh/
+profileUrlTemplate: "https://tangled.sh/@{identifier}"
+verificationMethods:
+  profile:
+    type: atproto

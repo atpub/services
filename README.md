@@ -1,3 +1,5 @@
 # ATpub Service Definitions
 
-https://services.atpub.me/
+Baseline service definitions for ATpub protocol
+
+https://atpub.me/services?src=atpub.me
