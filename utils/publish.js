@@ -5,6 +5,8 @@ import * as jsondiffpatch from 'jsondiffpatch'
 
 const SERVICE_COLLECTION = "me.atpub.identity.service"
 
+console.log(`Logging as ${process.env.ATPUB_SERVICE_IDENTIFIER} [pds=${process.env.ATPUB_SERVICE_PDS}] ..`)
+
 const agent = new AtpAgent({
   service: 'https://' + process.env.ATPUB_SERVICE_PDS
 })
