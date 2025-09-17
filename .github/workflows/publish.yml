@@ -4,16 +4,11 @@ on:
   push:
     branches: [ main ]
   workflow_dispatch:
-      
-permissions:
-  actions: write
-  contents: write
-  pages: write
-  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: atproto
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
